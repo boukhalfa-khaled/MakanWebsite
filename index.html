@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتب</title>
+    <!-- icon -->
+    <link rel="icon" href="images/house-icon-200.png" type="image/icon type">
+    
+    <!-- main css file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- google font-library -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Lemonada:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ICONSCOUT CDN -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- background -->
+    <script src="backgroun.js" defer ></script>
+
+    <!-- transition -->
+    <link rel="stylesheet" href="transition.css">
+    <script src="transition.js" defer></script>
+</head>
+<body >
+<div class="transition transition-1 is-active"></div>
+
+    <nav>
+        <div class="container"> 
+            
+            <div class="left">
+    
+                <!--  -->
+            <button  id="open_aside-btn"><i id="open_aside-btn" class="uil uil-bars"></i></button>
+                
+    
+                <div class="sign-in-btn">
+                    <a href="signin.html">
+                        <span>
+                            تسجيل الدخول
+                        </span>
+                        <i class="uil uil-user-plus"></i>
+                    </a>
+                </div>
+                <!-- <div class="avatar"><a href="">
+                    <img src="images/avatar.jpg" alt="">
+                </a>
+                </div> -->
+                <button class="search-icon "><i class="uil uil-signout"></i></button>
+                <button id="theme-chose" ><i class="uil uil-setting"></i><div class="theme">
+                    <ul class="theme-select">
+                        <li class="active" data-color="#1663bd" data-hover="#2386C8"></li>
+                        <li data-color="#FF6E31" data-hover="#EF9A53"></li>
+                        <li data-color="#1A4D2E" data-hover="#367E18"></li>
+                        <li data-color="#222" data-hover="#444"></li>
+                    </ul>
+                <!-- <div class="show"></div> -->
+                </button>
+
+
+            </div>
+            <div class="right">
+                <ul>
+                    <a href="posts.html">
+                        <li>تصفح المنازل</li>
+                    </a>
+                    <a href="add-post.html">
+                        <li>ضع منزلك للكراء</li>
+                    </a>
+                    <a href="add-post.html">
+                        <li>ضع منزلك للبيع</li>
+                    </a>
+            </ul>
+                 <a href="index.html">
+                    <div class="logo">مكان</div>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <aside id="aside" class="aside">
+        <!-- <form action="" id="aside-form-search">
+            <div >
+                <input type="search" name="search" id="search" placeholder="ابحث عن اي شيئ">
+                <button class="search-icon"><i class="uil uil-search"></i></button>
+            </div>
+        </form> -->
+            <ul>
+                <a href="posts.html">
+                    <li>
+                        تصفح المنازل
+                    </li>
+                </a>
+                <a href="">
+                        <li>
+                        ضع منزلك للكراء
+                    </li>
+                </a>
+                <a href="">
+                        <li>
+                        ضع منزلك للبيع
+                    </li>
+                </a>
+                <div class="nosignin">
+
+                    <a href="">
+                            <li>
+                            تسجيل الدخول
+                        </li>
+                    </a>
+                    <a href="">
+                            <li>
+                            انشاء حساب جديد
+                        </li>
+                    </a>
+                </div>
+                <a href="">
+                        <li>
+                        لصفحة الشخصية
+                    </li>
+                </a>
+                <button id="theme-chose" class="search-icon "><i class="uil uil-setting"></i>
+                    <div class="theme">
+                        <ul class="theme-select">
+                            <li class="active" data-color="#1663bd" data-hover="#2386C8"></li>
+                            <li data-color="#FF6E31" data-hover="#EF9A53"></li>
+                            <li data-color="#1A4D2E" data-hover="#367E18"></li>
+                            <li data-color="#222" data-hover="#444"></li>
+                        </ul>
+                        <div class="show"></div>
+                </button>
+            </ul>
+            
+    </aside>
+    
+    <section class="landing">
+        <div class="container">
+            <h3>
+                ابحث عن منزلك الجديد!
+            </h3>
+            <form class="serch-form" action="">
+                <div>
+                    <i class="uil uil-search"></i>
+                    <input type="search" name="" placeholder="ادخل موقع ،مدينة او حي">
+                </div>
+                <button type="submit" class="btn">
+                    ابحث
+                </button>
+            </form>
+            <p>
+                تريد كراء/بيع منزلك؟
+                <a href="login.html">
+                    سجل هنا
+                </a>
+            </p>
+        </div>
+    </section>
+    <section class="services">
+        <div class="container">
+            <div class="heading">
+                <div class="logo">مكان</div>
+                <h2>ما يوفره</h2>
+            </div>
+            <div class="content">
+                <a href="posts.html">
+                    <div class="card">
+                        <div class="icon">
+                            <i class="uil uil-key-skeleton-alt"></i>
+                        </div>
+                        <h3>تصفح المنازل</h3>
+                        <p>
+                            عبر
+                            <span>
+                                مكان
+                            </span>
+                            يمكنك العثور على منزل للكراء و الشراء بطريقة اسهل ابدأ التصفح الآن 
+                        </p>
+                    </div>
+                </a>
+                <a href="posts.html">
+                    <div class="card">
+                        <div class="icon">
+                            <i class="uil uil-building"></i>
+                        </div>
+                        <h3>تصفح المنازل</h3>
+                        <p>
+                            عبر
+                            <span>
+                                مكان
+                            </span>
+                            يمكنك العثور على منزل للكراء و الشراء بطريقة اسهل ابدأ التصفح الآن 
+                        </p>
+                    </div>
+                </a>
+                <a href="add-post.html">
+                    <div class="card">
+                        <div class="icon">
+                            <i class="uil uil-house-user"></i>
+                        </div>
+                        <h3>تصفح المنازل</h3>
+                        <p>
+                            عبر
+                            <span>
+                                مكان
+                            </span>
+                            يمكنك العثور على منزل للكراء و الشراء بطريقة اسهل ابدأ التصفح الآن 
+                        </p>
+                    </div>
+                </a>
+    
+            </div>
+        </div>
+    </section>
+    <!-- ! -->
+    <!-- ? -->
+    <!-- TODO fix this code here youzkkz -->
+    <!-- <section class="phone-ads">
+        <div class="container">
+            <div class="heading">
+                <h2>على الهواتف</h2>
+                <div class="logo">مكان</div>
+            </div>
+            <div class="content">
+                <div class="one">
+                    قريبا ستتوفر خدمات
+                    <span>مكان</span>
+                    على اجهزة ال
+                    Android
+                    وال
+                    IOS
+                </div>
+                <div class="two">
+                    <i class="uil uil-android"></i>
+                    <i class="uil uil-apple"></i>
+                    <i class="uil uil-android"></i>
+                    <i class="uil uil-apple"></i>
+                    <i class="uil uil-android"></i>
+                    <i class="uil uil-apple"></i>
+                </div>
+            </div>
+            </div>
+        
+        
+        </div>
+    </section> -->
+
+    <footer>
+        جميع الحقوق محفوظة ل مكان 2022
+    </footer>
+
+
+    <script src="main.js"></script>
+</body>
