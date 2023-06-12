@@ -1,0 +1,3 @@
+CREAT database in phpmyadmin >>> NAME : place 
+and select the current database(place) 
+now import place(1).sql.gz

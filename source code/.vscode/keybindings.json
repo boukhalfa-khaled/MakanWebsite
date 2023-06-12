@@ -1,0 +1,116 @@
+// Place your key bindings in this file to override the defaults
+[
+   {
+      "key": "ctrl+alt+v",
+      "command": "toggleVim"
+   },
+
+      {
+      "key": "ctrl+k",
+      "command": "selectNextSuggestion",
+      "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+   },
+   {
+      "key": "ctrl+j",
+      "command": "selectPrevSuggestion",
+      "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+   },
+      {
+         "key": "ctrl+k",
+         "command": "list.focusDown",
+         "when": "listFocus && !inputFocus"
+      },
+
+      {
+         "key": "ctrl+j",
+         "command": "list.focusUp",
+         "when": "listFocus && !inputFocus"
+      },
+
+      {
+         "key": "alt+k",
+         "command": "cursorDown",
+         "when": "textInputFocus"
+      },
+
+      {
+         "key": "alt+j",
+         "command": "cursorUp",
+         "when": "textInputFocus"
+      },
+      {
+         "key": "alt+l",
+         "command": "cursorRight",
+         "when": "textInputFocus"
+      },
+
+      {
+         "key": "alt+h",
+         "command": "cursorLeft",
+         "when": "textInputFocus"
+      },
+
+      {
+         "key": "ctrl+alt+l",
+         "command": "cursorWordEndRight",
+         "when": "textInputFocus && !accessibilityModeEnabled"
+      },
+      {
+         "key": "ctrl+alt+h",
+         "command": "cursorWordLeft",
+         "when": "textInputFocus && !accessibilityModeEnabled"
+      },
+      {
+         "key": "ctrl+alt+k",
+         "command": "scrollLineDown",
+         "when": "textInputFocus"
+      },
+
+      {
+         "key": "ctrl+alt+j",
+         "command": "scrollLineUp",
+         "when": "textInputFocus"
+      },
+
+      {
+         "key": "ctrl+shift+alt+k",
+         "command": "cursorDownSelect",
+         "when": "textInputFocus"
+      },
+
+      {
+         "key": "ctrl+shift+k",
+         "command": "editor.action.deleteLines",
+         "when": "textInputFocus && !editorReadonly"
+      },
+
+      {
+         "key": "ctrl+shift+alt+j",
+         "command": "cursorUpSelect",
+         "when": "textInputFocus"
+      },
+      {
+         "key": "ctrl+shift+alt+l",
+         "command": "cursorWordEndRightSelect",
+         "when": "textInputFocus && !accessibilityModeEnabled"
+      },
+      {
+         "key": "ctrl+shift+alt+h",
+         "command": "cursorWordLeftSelect",
+         "when": "textInputFocus && !accessibilityModeEnabled"
+      },
+
+      {
+         "key": "shift+alt+l",
+         "command": "cursorRightSelect",
+         "when": "textInputFocus"
+      },
+
+      {
+         "key": "shift+alt+h",
+         "command": "cursorLeftSelect",
+         "when": "textInputFocus"
+      },
+]
+
+

@@ -1,0 +1,239 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jan 10, 2023 at 06:35 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.5
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `place`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `images`
+--
+
+CREATE TABLE `images` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `imageName` varchar(1000) NOT NULL,
+  `post_id` int(11) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `images`
+--
+
+INSERT INTO `images` (`id`, `imageName`, `post_id`) VALUES
+(82, '16733255810nathan-fertig-FBXuXp57eM0-unsplash.jpg', 19),
+(83, '16733255811pixasquare-4ojhpgKpS68-unsplash.jpg', 19),
+(84, '16733255812sidekix-media-0sDzRgrN_pI-unsplash.jpg', 19),
+(85, '16733255813sven-brandsma-GZ5cKOgeIB0-unsplash.jpg', 19),
+(86, '16733256730johnson-johnson-U6Q6zVDgmSs-unsplash.jpg', 20),
+(87, '16733256731kenny-eliason-Wp7t4cWN-68-unsplash.jpg', 20),
+(88, '16733256732msg5083231631-11053.jpg', 20),
+(89, '16733256733msg5083231631-11054.jpg', 20),
+(90, '16733256744msg5083231631-11055.jpg', 20),
+(91, '16733256745msg5083231631-11056.jpg', 20),
+(92, '16733256746msg5083231631-11057.jpg', 20),
+(93, '16733256747msg5083231631-11058.jpg', 20),
+(94, '16733258780loewe-technology-azMs02-lAFk-unsplash.jpg', 21),
+(95, '16733258781msg5083231631-11048.jpg', 21),
+(96, '16733258782msg5083231631-11049.jpg', 21),
+(97, '16733258783msg5083231631-11050.jpg', 21),
+(98, '16733258784msg5083231631-11051.jpg', 21),
+(99, '16733258785msg5083231631-11059.jpg', 21),
+(100, '16733258786msg5083231631-11060.jpg', 21),
+(101, '16733258787msg5083231631-11061.jpg', 21),
+(102, '16733258788msg5083231631-11062.jpg', 21),
+(103, '16733259720msg5083231631-11063.jpg', 22),
+(104, '16733259721msg5083231631-11064.jpg', 22),
+(105, '16733259722msg5083231631-11065.jpg', 22),
+(106, '16733259723msg5083231631-11066.jpg', 22),
+(107, '16733259734msg5083231631-11067.jpg', 22),
+(108, '16733259735msg5083231631-11068.jpg', 22),
+(109, '16733259736msg5083231631-11075.jpg', 22),
+(110, '16733259737msg5083231631-11076.jpg', 22),
+(111, '16733259738nathan-fertig-FBXuXp57eM0-unsplash.jpg', 22),
+(112, '16733259739peter-jan-rijpkema-pnEtsdgBeBE-unsplash.jpg', 22),
+(113, '167332597310pixasquare-4ojhpgKpS68-unsplash.jpg', 22),
+(114, '167332597311sidekix-media-0sDzRgrN_pI-unsplash.jpg', 22),
+(115, '16733260740msg5083231631-11062.jpg', 23),
+(116, '16733260741msg5083231631-11063.jpg', 23),
+(117, '16733260742msg5083231631-11064.jpg', 23),
+(118, '16733260743msg5083231631-11065.jpg', 23),
+(119, '16733260744msg5083231631-11066.jpg', 23),
+(120, '16733260745msg5083231631-11067.jpg', 23),
+(121, '16733260756msg5083231631-11074.jpg', 23),
+(122, '16733260757msg5083231631-11075.jpg', 23),
+(123, '16733260758msg5083231631-11076.jpg', 23),
+(124, '16733260759nathan-fertig-FBXuXp57eM0-unsplash.jpg', 23),
+(125, '167332607510peter-jan-rijpkema-pnEtsdgBeBE-unsplash.jpg', 23),
+(126, '167332607511pixasquare-4ojhpgKpS68-unsplash.jpg', 23);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `posts`
+--
+
+CREATE TABLE `posts` (
+  `post_id` int(11) UNSIGNED NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `type` enum('للكراء','للبيع') NOT NULL,
+  `price` int(255) NOT NULL,
+  `wilay_id` int(11) UNSIGNED NOT NULL,
+  `user_id` int(11) UNSIGNED NOT NULL,
+  `body` varchar(4000) NOT NULL,
+  `data_time` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `posts`
+--
+
+INSERT INTO `posts` (`post_id`, `title`, `type`, `price`, `wilay_id`, `user_id`, `body`, `data_time`) VALUES
+(19, 'ستة غرف + مرأب للسيارة ', 'للكراء', 900000, 1, 8, 'ستة غرف + مرأب للسيارة \r\nستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ستة غرف + مرأب للسيارة ', '2023-01-10 04:39:41'),
+(20, 'منزل للبيع بمساحة 100 متر مربع', 'للبيع', 6000000, 1, 8, 'منزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربعمنزل للبيع بمساحة 100 متر مربع', '2023-01-10 04:41:13'),
+(21, 'home for sale in boumerdas', 'للبيع', 8000000, 4, 9, 'home for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdashome for sale in boumerdas', '2023-01-10 04:44:38'),
+(22, 'home for rent in algerie', 'للكراء', 1230000, 3, 9, 'home for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algeriehome for rent in algerie', '2023-01-10 04:46:12'),
+(23, 'rcu dictum varius duis at. Consequat', 'للكراء', 13213213, 2, 9, 'Urna nunc id cursus metus aliquam eleifend mi in. Netus et malesuada fames ac turpis egestas sed tempus urna. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Maecenas sed enim ut sem viverra. Sed turpis tincidunt id aliquet risus feugiat in ante metus. Pellentesque sit amet porttitor eget. Sociis natoque penatibus et magnis dis parturient. Hac habitasse platea dictumst vestibulum. Blandit aliquam etiam erat velit scelerisque in dictum. In mollis nunc sed id semper risus in hendrerit gravida. Nibh mauris cursus mattis molestie a iaculis at. Eget arcu dictum varius duis at. Consequat mauris nunc congue nisi vitae suscipit tellus mauris. Nunc mattis enim ut tellus. Senectus et netus et malesuada fames ac turpis egestas integer.\r\n\r\nEnim eu turpis egestas pretium aenean. Etiam erat velit scelerisque in dictum non consectetur a erat. Tristique magna sit amet purus gravida. Molestie at elementum eu facilisis sed odio morbi quis commodo. Neque viverra justo nec ultrices dui. At urna condimentum mattis pellentesque. Luctus accumsan tortor posuere ac ut consequat semper viverra nam. Quam adipiscing vitae proin sagittis. Feugiat nisl pretium fusce id velit ut tortor pretium. Odio euismod lacinia at quis risus. Ultricies mi quis hendrerit dolor magna.\r\n\r\nPellentesque habitant morbi tristique senectus et netus et. Eu augue ut lectus arcu. Lacus luctus accumsan tortor posuere. A diam sollicitudin tempor id eu. Aenean sed adipiscing diam donec. Neque ornare aenean euismod elementum nisi quis eleifend. Tortor posuere ac ut consequat semper viverra nam libero. Mauris augue neque gravida in. Est velit egestas dui id ornare arcu. Leo integer malesuada nunc vel risus commodo viverra maecenas.\r\n\r\nAugue ut lectus arcu bibendum at varius vel pharetra vel. Facilisis gravida neque convallis a. Suspendisse interdum consectetur libero id. Odio ut enim blandit volutpat maecenas. Scelerisque varius morbi enim nunc faucibus a pellentesque sit amet. Nunc mi ipsum faucibus vitae. Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque. Amet justo donec enim diam. Justo nec ultrices dui sapien eget mi proin sed libero. At auctor urna nunc id. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur. A scelerisque purus semper eget duis at tellus at. Ac turpis egestas integer eget aliquet nibh. Hendrerit gravida rutrum quisque non tellus orci ac. Diam in arcu cursus euismod quis. Et magnis dis parturient montes nascetur ridiculus mus. Commodo ullamcorper a lacus vestibulum sed arcu non. Mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa.\r\n\r\nEt malesuada fames ac turpis egestas maecenas. Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed. Et sollicitudin ac orci phasellus. Nullam vehicula ipsum a arcu cursus vitae congue. Ut porttitor leo a diam. In mollis nunc sed id. Porttitor massa id neque aliquam vestibulum morbi blandit cursus risus. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Habitant morbi tristique senectus et netus. Augue mauris augue neque gravida in fermentum. Sit amet mauris commodo quis imperdiet massa tincidunt. Leo vel fringilla est ullamcorper. Elit ut aliquam purus sit amet. Faucibus vitae aliquet nec ullamcorper sit amet risus. Id neque aliquam vestibulum morbi blandit cursus risus at. Et malesuada fames ac turpis egestas maecenas pharetra. Elementum nibh tellus molestie nunc non blandit. Euismod lacinia at quis risus sed vulputate odio ut. Porttitor rhoncus dolor purus non enim praesent.\r\n\r\nAuctor neque vitae tempus quam pellentesque nec nam aliquam. Volutpat commodo sed egestas egestas. Tortor vitae purus faucibus ornare suspendisse sed nisi. Quis commodo odio aenean sed adipiscing diam donec. Tincidunt praesent semper feugiat nibh sed pulvinar. Nunc aliquet bibendum enim facilisis gravida. Egestas integer eget aliquet nibh praesent tristique. Rutrum qu', '2023-01-10 04:47:54');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `avatar` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `phone` int(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `is_admin` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `avatar`, `name`, `username`, `phone`, `password`, `is_admin`) VALUES
+(8, '1673325336gruvbox wallpaper.png', 'khaled', 'khaled', 697971587, '123456789', 0),
+(9, '1673325749william-warby-ld4wZGqlLF4-unsplash.jpg', 'mohamed', 'mohamed', 663152387, '123456789', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wilay`
+--
+
+CREATE TABLE `wilay` (
+  `w_id` int(11) UNSIGNED NOT NULL,
+  `wilayName` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `wilay`
+--
+
+INSERT INTO `wilay` (`w_id`, `wilayName`) VALUES
+(1, 'الجلفة'),
+(2, 'وهران'),
+(3, 'الجزائر'),
+(4, 'بومرداس');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `images`
+--
+ALTER TABLE `images`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `imagesForPost` (`post_id`);
+
+--
+-- Indexes for table `posts`
+--
+ALTER TABLE `posts`
+  ADD PRIMARY KEY (`post_id`),
+  ADD KEY `post_user` (`user_id`),
+  ADD KEY `post_wilay` (`wilay_id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wilay`
+--
+ALTER TABLE `wilay`
+  ADD PRIMARY KEY (`w_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `images`
+--
+ALTER TABLE `images`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
+
+--
+-- AUTO_INCREMENT for table `posts`
+--
+ALTER TABLE `posts`
+  MODIFY `post_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `wilay`
+--
+ALTER TABLE `wilay`
+  MODIFY `w_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `images`
+--
+ALTER TABLE `images`
+  ADD CONSTRAINT `imagesForPost` FOREIGN KEY (`post_id`) REFERENCES `posts` (`post_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `posts`
+--
+ALTER TABLE `posts`
+  ADD CONSTRAINT `post_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `post_wilay` FOREIGN KEY (`wilay_id`) REFERENCES `wilay` (`w_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
